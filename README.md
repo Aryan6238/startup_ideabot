@@ -14,6 +14,7 @@ startup_ideabot/
 │── generate_ideas.py          # Main script to generate startup ideas
 │── gpt4all-models.iml         # Project metadata file (IDE-specific)
 │── requirements.txt           # Python dependencies
+│── gpt4all-models             # Folder required for storing the model (mistral)
 ```
 
 ---
@@ -102,7 +103,7 @@ pip install -r requirements.txt
 
 - **Python 3.8+**
 - **Pandas** – dataset handling  
-- **Transformers / GPT4All** – AI text generation  
+- **Transformers / GPT4All** – AI text generation. Use the given link to download the hugging face model- https://huggingface.co/TheBloke/Mistral-7B-Instruct-v0.2-GGUF/blob/main/mistral-7b-instruct-v0.2.Q4_K_M.gguf
 - **Numpy, Scikit-learn** – preprocessing (if used)  
 
 ---
