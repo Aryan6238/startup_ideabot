@@ -117,8 +117,8 @@ if llm is None:
     st.stop()
 
 # ------------------- STREAMLIT UI -------------------
-st.title("🚀 Startup Idea Generator (RTX 3050 Ti Optimized)")
-st.info("💻 Powered by your ASUS ROG Strix G17 RTX 3050 Ti")
+st.title("🚀 WEL-COME to Idea-bot")
+st.info("💻 A New AI-based Startup Idea Generatoin model")
 
 query = st.text_input("💡 Describe your startup goal, audience, or tech:")
 
