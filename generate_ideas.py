@@ -15,7 +15,7 @@ TOP_K = 3
 
 # Check if model file exists
 if not os.path.exists(MODEL_PATH):
-    st.error(f"❌ Model file not found at: {MODEL_PATH}. Please check the path.")
+    st.error(f"❌ Model file is not found at: {MODEL_PATH}. Please check the path.")
     st.stop()
 
 # ------------------- LOAD DATA -------------------
@@ -66,7 +66,7 @@ def load_llm():
         )
         return llm
     except Exception as e:
-        st.error(f"❌ Failed to load model: {e}")
+        st.error(f"❌ Failed to load the model: {e}")
         return None
 
 # ------------------- SPELL CHECK -------------------
@@ -118,9 +118,9 @@ if llm is None:
 
 # ------------------- STREAMLIT UI -------------------
 st.title("🚀 WEL-COME to Idea-bot")
-st.info("💻 A New AI-based Startup Idea Generatoin model")
+st.info("💻 A New AI-based Startup Idea Generation model")
 
-query = st.text_input("💡 Describe your startup goal, audience, or tech:")
+query = st.text_input("💡 Describe your startup goal, audience, or tech here:")
 
 if query:
     st.write("🔍 Finding inspiration from our knowledge base...")
@@ -171,7 +171,7 @@ Make sure each idea is well-formatted, readable, and practical."""
                 fallback_ideas = re.split(r'💡 Project Name:', formatted_output)
                 ideas = ['💡 Project Name:' + i for i in fallback_ideas if i.strip()]
             
-            st.success(f"✅ Generated {len(ideas)} AI Startup Ideas:")
+            st.success(f"✅ Generated {len(ideas)} AI Startup Ideas are:")
             st.markdown("---")
             
             for i, idea_text in enumerate(ideas[:3], 1):
@@ -186,5 +186,5 @@ Make sure each idea is well-formatted, readable, and practical."""
                     st.markdown("---")
                         
         except Exception as e:
-            st.error(f"⚡ Generation failed: {e}")
+            st.error(f"⚡ Generation failed : {e}")
             st.info("Please try a different query or simpler request.")
